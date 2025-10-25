@@ -19,7 +19,7 @@ func (p *PaceCalculator) CalculatePace(distanceKm float64, result time.Duration)
 		return 0
 	}
 
-	timeInMins := result.Minutes()
+	timeInMins := result.Minutes() * 60
 
 	// Return rounded to two decimals
 	return math.Round(timeInMins/distanceKm*100) / 100
