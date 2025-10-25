@@ -9,17 +9,7 @@ import (
 	"time"
 )
 
-type PaceTestCase struct {
-	name            string
-	distanceKm      float64
-	duration        time.Duration
-	expectedPace    float64
-	expectedDisplay *PaceDisplay
-}
-
 const eps = 0.01
-
-var pc = PaceCalculator{}
 
 // Test pace calculation on various inputs
 func TestCalculatePace(t *testing.T) {
